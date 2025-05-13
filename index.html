@@ -64,12 +64,12 @@
             More Research
           </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="https://energy-based-model.github.io/decomp-diffusion/">
-              Decomposed Diffusion
-            </a>
             <a class="navbar-item"
               href="https://energy-based-model.github.io/Compositional-Visual-Generation-with-Composable-Diffusion-Models/">
               Composable Diffusion
+            </a>
+            <a class="navbar-item" href="https://energy-based-model.github.io/decomp-diffusion/">
+              Decomposed Diffusion
             </a>
             <a class="navbar-item" href="https://energy-based-model.github.io/comet/">
               COMET
@@ -103,6 +103,10 @@
             <div class="is-size-5 publication-authors">
               <span class="author-block"><sup>1</sup>TU Delft,</span>
               <span class="author-block"><sup>2</sup>Harvard University</span>
+            </div>
+
+            <div class="conference">
+              <span class="icml"><strong>ICML 2025</strong></span>
             </div>
 
             <div class="column has-text-centered">
@@ -147,7 +151,7 @@
     <div class="container is-max-desktop">
       <div class="hero-body">
         <video id="teaser" autoplay muted loop playsinline height="100%">
-          <source src="materials/figures/teaser_denoising.mp4" type="video/mp4">
+          <source src="materials/figures/comp_infer_teaser_animation" type="video/mp4">
         </video>
       </div>
     </div>
@@ -163,15 +167,20 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Our visual understanding of the world is factorized and compositional. With just a single visual
-              observation, we can deduce both global and local scene attributes, such as materials, weather, lighting,
-              and underlying objects in the scene. These attributes are highly compositional and can be combined in
-              various ways to create new representations of the world. This website introduces Decomp Diffusion, an
-              unsupervised method for decomposing images into a set of underlying compositional factors, each
-              represented by a different diffusion model. We demonstrate how each decomposed diffusion model captures a
-              different factor of the scene, ranging from global scene descriptors (e.g. shadows, foreground, facial
-              expression) to local scene descriptors (e.g. constituent objects). Furthermore, we show how these inferred
-              factors can be flexibly composed and recombined both within and across different image datasets.
+              Generative models have demonstrated remarkable abilities in generating high-fidelity visual content.
+              In this work, we explore how generative models can further be used not only to synthesize
+              visual content but also to understand the properties of a scene given a natural image.
+              We formulate scene understanding as an inverse generative modeling problem,
+              where we seek to find conditional parameters of a visual generative model to best
+              fit a given natural image. To enable this procedure to infer scene structure from images
+              substantially different than those seen during training, we further propose to build
+              this visual generative model compositionally from smaller models over pieces of
+              a scene. We illustrate how this procedure enables us to infer the set of objects in a
+              scene, enabling robust generalization to new test scenes with an increased number of
+              objects of new shapes. We further illustrate how this enables us to infer global scene
+              factors, likewise enabling robust generalization to new scenes. Finally, we illustrate
+              how this approach can be directly applied to existing pretrained text-to-image generative
+              models for zero-shot multi-object perception.
             </p>
           </div>
         </div>
